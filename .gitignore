@@ -1,4 +1,9 @@
-themes
-public
 *.swp
+archetypes
+themes
+static
+layouts
+data
+content
+config.toml
 

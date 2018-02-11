@@ -1,0 +1,655 @@
+@charset "utf-8";
+/**
+ * style
+ * (c) FOURDIGIT Inc.
+ *
+ * 1. import
+ * 2. html, body
+ * 3. HTMLtag, siteCommonClass
+ * 4. Layout
+ * 5. EachPageStyle
+ *
+ */
+/**
+ * 1. import
+ */
+@import "import/reset.css";
+@import "import/util.css";
+/* @import "../ext_{bukkenID}/{bukkenID}.css"; */
+
+/**
+ * 2. html, body
+ */
+html {
+	position: static;
+}
+	body {
+		background-color: #030129;
+		background-image: url(../imgs/space.gif);
+		background-repeat: repeat-x;
+		background-position: center top;
+
+	}
+	.page {
+		color: #333333;
+		font-size: 12px;
+		line-height: 1.5;
+		font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+	}
+/**
+ * 3. HTMLtag, siteCommonClass
+ */
+/* anchor */
+	a {
+		background-color: transparent;
+		color: #0000ff;
+		text-decoration: none;
+	}
+	a:visited {}
+	a:hover {
+		color: #ff0000;
+		background-position: bottom right;
+		text-decoration: underline;
+	}
+	a:active {}
+
+/* heading */
+	.siteTitle {
+		/*dont use <h1> selector*/
+	}
+	.contentTitle {
+		/*dont use <h2> selector*/
+	}
+
+/* cap */
+	.cap,
+	.caption {
+		background: none;
+		color: #666666;
+		font-size: 10px;
+		line-height: 15px;
+	}
+	.cap {
+		padding-top: 5px;
+	}
+
+	.captionRed {
+		background: none;
+		color: #c62b62;
+		font-size: 10px;
+		line-height: 15px;
+	}
+
+
+/**
+ * 4. Layout
+ */
+	#container {
+	}
+	#containerInner01 {
+	}
+	#containerInner02 {
+	}
+
+	img {
+		box-sizing: border-box;
+		max-width: 100%;
+	}
+
+	.serif {
+		font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "HiraMinProN-W3", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+	}
+	.sp,
+	.tb {
+		display: none;
+	}
+	.wrap {
+		max-width: 1200px;
+		margin-right: auto;
+		margin-left: auto;
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+	.wrap960 {
+		max-width: 960px;
+	}
+
+	/* header */
+
+	#gHeader {
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 9000;
+		background: #fff;
+	}
+	#siteTitle {
+		padding-left: 20px;
+	}
+	#gHeader .wrap {
+		max-width: 1360px;
+		padding: 10px 0 9px;
+		position: relative;
+	}
+	.shldrTxt {
+		font-size: 10px;
+		line-height: 15px;
+	}
+	#pNav li {
+		position: absolute;
+	}
+	#pNav .menu,
+	#pNav .tel {
+		display: none;
+	}
+	#pNav .outline {
+		top: 25px;
+		right: 271px;
+	}
+	#pNav .map {
+		top: 45px;
+		right: 261px;
+	}
+	#pNav .request {
+		top: 0;
+		right: 0;
+	}
+	#pNav .member {
+		top: 0;
+		right: 121px;
+	}
+	#gNav {
+		text-align: center;
+		border-top: 1px solid #e7ebdb;
+		border-bottom: 1px solid #e7ebdb;
+	}
+	#gNav li {
+		display: inline-block;
+		position: relative;
+	}
+	#gNav li:first-child {
+		margin: 0;
+	}
+	#gNav li:before {
+		content: "";
+		display: inline-block;
+		width: 1px;
+		height: 20px;
+		vertical-align: middle;
+		background-color: #e7ebdb;
+	}
+	#gNav li.afterservice:after {
+		content: "";
+		display: inline-block;
+		width: 1px;
+		height: 20px;
+		vertical-align: middle;
+		background-color: #e7ebdb;
+	}
+	#gNav .outline,
+	#gNav .close {
+		display: none;
+	}
+	#gNav li a,
+	#gNav li strong {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	#gNav img {
+		vertical-align: top;
+	}
+	.new {
+		display:block;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	#gNav .member {
+		display: none;
+	}
+
+@media only screen and (max-width:1000px) {
+	#gHeader {
+		position: relative;
+	}
+	#gHeader .wrap {
+		padding: 10px 0;
+	}
+	#siteTitle {
+		padding: 10px 0 10px;
+		text-align: center;
+	}
+	#pNav {
+		width: 100%;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		z-index: 9000;
+	}
+	#pNav li,
+	#pNav .menu,
+	#pNav .tel {
+		display: inline-block;
+		width: 25%;
+		position: static;
+		text-align: center;
+	}
+	#pNav .outline {
+		display: none;
+	}
+	#pNav .menu {
+		position: relative;
+		background: #edefe8;
+		cursor: pointer;
+	}
+	#pNav .menu:after {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 1px;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		background: #cdcdcd;
+	}
+	#pNav .tel {
+		background: #6b8817;
+	}
+	#pNav .map {
+		background: #8faf30;
+	}
+	#pNav .request {
+		background: #c62b62;
+	}
+	#pNav img {
+		max-height: 60px;
+	}
+	#pNav img.sp {
+		display: inline-block;
+	}
+	#pNav img.sp ~ img {
+		display: none;
+	}
+	#pNav .member {
+		display: none;
+	}
+	#gNav {
+		display: none;
+		position: fixed;
+		right: 0;
+		left: 0;
+		z-index: 8990;
+		background: #edefe8;
+	}
+	#gNav .outline {
+		display: inline-block;
+	}
+	#gNav li,
+	#gNav .result {
+		box-sizing: border-box;
+		width: 25%;
+		border-right: 1px solid #cdcdcd;
+		border-bottom: 1px solid #cdcdcd;
+		margin: 0;
+		position:relative;
+	}
+	#gNav li:nth-child(4n+4) {
+		border-right: none;
+	}
+	#gNav a,
+	#gNav strong {
+		display: block;
+		color: #3b2e16;
+		font-size: 20px;
+		font-weight: normal;
+		line-height: 58px;
+		text-decoration: none;
+	}
+	#gNav .sp {
+		display: inline;
+	}
+	#gNav .sp ~ img {
+		display: none;
+	}
+	#gNav .close {
+		display: block;
+		color: #fff;
+		font-size: 20px;
+		line-height: 60px;
+		background: #96b832;
+		cursor: pointer;
+	}
+	#gNav .close span:before {
+		content: '×';
+		margin: 0 1em 0 0;
+	}
+	.newSp {
+		display: block;
+		position:absolute;
+		top:0;
+		right:0;
+	}
+
+	#gNav .member {
+		display: block;
+	}
+}
+@media only screen and (max-width:760px) {
+	#gNav li,
+	#gNav .result {
+		width: 50%;
+	}
+	#gNav li:nth-child(2n+2) {
+		border-right: none;
+	}
+	#gNav a,
+	#gNav strong,
+	#gNav .close {
+		font-size: 14px;
+		line-height: 40px;
+	}
+}
+@media only screen and (max-width:640px) {
+	#pNav a.sp {
+		display: inline;
+	}
+	#pNav a.sp ~ a {
+		display: none;
+	}
+}
+	/* contents */
+
+	#mainContent {
+		padding: 80px 0;
+	}
+
+	#pageTitle {
+		margin: 60px 0 0;
+		position: relative;
+		overflow: hidden;
+	}
+/*	#pageTitle:before {
+		content: '';
+		display: block;
+		margin: 0 0 0 -200px;
+		width: 50%;
+		height: 80px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: url(../imgs/bg-03.png) 0 0 repeat;
+	}*/
+	#pageTitle .wrap {
+		position: relative;
+		text-align: center;
+	}
+
+	.caption.bk {
+		color: #000;
+		text-shadow: 0 0 3px #fff, 0 0 2px #fff, 0 0 3px #fff;
+	}
+	.caption.wh {
+		color: #fff;
+		text-shadow: 0 0 3px #000, 0 0 2px #000, 0 0 3px #000;
+	}
+
+	.indent {
+		padding-left: 1em;
+		text-indent: -1em;
+	}
+
+	#next {
+		margin: 100px 0 0;
+	}
+
+@media only screen and (max-width:1000px) {
+	#mainContent {
+		padding: 0 0 80px;
+	}
+}
+@media only screen and (max-width:640px) {
+	#pageTitle {
+		margin: 30px 0 0;
+	}
+	#pageTitle:before {
+		content: normal;
+	}
+
+	.title01 .sp,
+	.title02 .sp {
+		display: inline;
+	}
+	.title01 .sp ~ img,
+	.title02 .sp ~ img,
+	.title01 .sp ~ br,
+	.title02 .sp ~ br {
+		display: none;
+	}
+	.title01 .sp {
+		font-size: 20px;
+	}
+	.title01 .sp strong,
+	.title02 .sp strong {
+		color: #789426;
+		font-weight: normal;
+	}
+	.title02 .sp {
+		font-size: 16px;
+	}
+}
+
+	/* footer */
+
+	#cv {
+		padding: 90px 0 95px;
+		background: url(../imgs/bg-cv.jpg) 50% 0 repeat;
+		background-size: cover;
+		text-align: center;
+	}
+
+	#gFooter {
+		padding: 0 0 10px;
+		text-align: center;
+	}
+
+	#fNav {
+		padding: 22px 0;
+		background: #96b832;
+		color: #fff;
+		font-size: 12px;
+		line-height: 18px;
+	}
+	#fNav .wrap {
+		position: relative;
+	}
+	#fNav ul {
+		padding: 0 90px;
+	}
+	#fNav li {
+		display: inline-block;
+		margin: 0 18px;
+		padding: 9px 0;
+	}
+	#fNav a {
+		color: #fff;
+	}
+	#fNav strong {
+		font-weight: bold;
+	}
+	#fNav .pageTop {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+
+	#contact {
+		padding: 50px 0 60px;
+	}
+	#ci ul {
+		margin: 60px 0 10px;
+		font-size: 10px;
+	}
+	#ci li {
+		display: inline;
+		margin: 0 0 0 1.5em;
+	}
+	#ci li:first-child {
+		margin: 0;
+	}
+	#ci a,
+	#ci a:hover {
+		color: #96b832;
+	}
+	#ci li img {
+		vertical-align: text-top;
+	}
+	#ci .copyright {
+		font-size: 10px;
+	}
+@media only screen and (max-width:1220px) {
+	#fNav .pageTop {
+		right: 10px;
+	}
+}
+@media only screen and (max-width:640px) {
+	#cv {
+		display: none;
+	}
+	#cvSp {
+		display: block;
+		padding: 12.5% 4.6%;
+		background: url(../imgs/bg-cv.jpg) 50% 0 repeat;
+		background-size: cover;
+		text-align: center;
+	}
+
+	#fNav {
+		padding: 0;
+		background: #edefe8;
+	}
+	#fNav ul {
+		border-top: 1px solid #cdcdcd;
+		padding: 0;
+	}
+	#fNav li {
+		box-sizing: border-box;
+		width: 50%;
+		margin: 0;
+		padding: 0;
+		border-right: 1px solid #cdcdcd;
+		border-bottom: 1px solid #cdcdcd;
+	}
+	#fNav li:nth-child(even) {
+		border-right: none;
+	}
+	#fNav .map {
+		display: none;
+	}
+	#fNav a,
+	#fNav strong {
+		display: block;
+		color: #3b2e16;
+		font-size: 14px;
+		font-weight: normal;
+		line-height: 40px;
+		text-decoration: none;
+	}
+	#fNav .pageTop {
+		display: none;
+	}
+
+	#contact {
+		padding: 12.5% 4.6%;
+	}
+	#contact .sp {
+		display: block;
+	}
+	#contact .sp ~ img{
+		display: none;
+	}
+	#ci li {
+		display: block;
+		margin: 0;
+	}
+	#ci li:first-child {
+		margin: 0;
+	}
+	#ci .copyright br.sp {
+		display: inline;
+	}
+
+}
+
+	#seasonSlideWrap {
+		border: none !important;
+	}
+@media only screen and (max-width:980px) {
+	#seasonSlideWrap {
+		display: none;
+	}
+}
+
+/* pop */
+	.pop .wrap {
+		max-width: 960px;
+	}
+	.pop #gHeader {
+		position: static;
+	}
+	.pop #mainContent {
+		padding: 50px 0 0;
+	}
+	.pop #pageTitle {
+		margin: 0 0 50px;
+	}
+	.pop #pageTitle:before {
+		content: normal;
+	}
+	.pop #pageTitle .wrap {
+		text-align: left;
+	}
+
+@media only screen and (max-width:1000px) {
+	.pop #gHeader {
+		position: relative;
+	}
+	.pop #gHeader .wrap {
+		padding: 10px 10px 9px;
+	}
+	.pop #siteTitle {
+		text-align: left;
+		padding-top: 0;
+	}
+	.pop #pNav {
+		width: auto;
+		position: static;
+	}
+	.pop #pNav li {
+		display: block;
+		width: auto;
+		position: absolute;
+	}
+	.pop #pNav .request {
+		background: #fff;
+	}
+	.pop #pNav img {
+		max-height: none;
+	}
+	.pop #pNav img.sp {
+		display: none;
+	}
+	.pop #pNav img.sp ~ img {
+		display: inline-block;
+	}
+}
+
+.memberPlanLink {
+	margin-top: 40px;
+}
+
+.memberPlanLink a:hover {
+	transition: all 0.35s;
+	opacity: 0.7;
+}
